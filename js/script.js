@@ -1,6 +1,6 @@
 words = new Array;
 
-words = [["d", "t",	"h", "e", "r", "e", "i", "s", "n", "o", "t", "h", "i", "n", "g", "p", "d"],
+words = [["d", "t", "h", "e", "r", "e", "i", "s", "n", "o", "t", "h", "i", "n", "g", "p", "d"],
         ["j", "g", "l", "o", "l", "r", "e", "a", "l", "l", "y", "g", "t", "h", "e", "r", "e"], 
         ["b", "y", "c", "d", "o", "u", "n", "o", "d", "a", "w", "a", "y", "e", "h", "o", "h"],
         ["g", "u", "n", "a", "j", "o", "n", "a", "s", "m", "a", "t", "h", "s", "c", "o", "l"], 
@@ -85,23 +85,23 @@ binary = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 document.write("<h2>Cidades</h2>")
 
 
-document.write("<table border='1'>");
+document.write("<table border='1'>"); //abre a tag table
 
-         for(i = 0; i <= 35; i++){
+         for(i = 0; i <= 35; i++){ //inicia a criação da linha  
             document.write("<tr>");
             
-            for(x = 0; x <= 16; x++){
+            for(x = 0; x <= 16; x++){ //inicia a criação de colunas
                 
-                if(binary[i][x] == 1){
-                document.write("<td bgcolor='red'>" + words[i][x] + "</td>");
+                if(binary[i][x] == 1){ //se valor do elemento for igual a 1, significa que o elemento faz parte de uma palavra
+                document.write("<td bgcolor='red'>" + words[i][x] + "</td>"); //então, pinte a célula do mesmo elemento e feche a coluna
                 }
 
-                else{
+                else{ //caso não seja, não pinte e feche a coluna
                 document.write("<td>" + words[i][x] + "</td>");
                 }
             }
 
-            document.write("</tr>");
+            document.write("</tr>"); //termina a criação da linha
          }
     
-         document.write("</table>");
+         document.write("</table>"); //fecha a table
